@@ -1,2 +1,3 @@
 # Youtube_Manager_App
-# Main technology use File handling in project folder
+# Main technology used in project folder (File handling) 
+# Main technology used in project1 folder(database handling using sqlite3)
