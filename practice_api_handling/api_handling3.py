@@ -11,11 +11,13 @@ data = r.json()
 # print(data['info']) # {'count': 826, 'pages': 42, 'next': 'https://rickandmortyapi.com/api/character?page=2', 'prev': None}
 # print(data['info']['pages']) # 42
 
+names = []
 # list or array and [0] is first item
-name = data['data']['data'][0]['items']['snippet']['channelId'] # Rick Sanchez
-
+for item in data['data']['data']:
+    name = item['items']['snippet']['channelId'] # Rick Sanchez
+    names.append(name)
 # episodes = data['results'][0]['episode'][0] # first episode
-
-print(f"\nEpisode: {name}")
+for name in names:
+    print(f"\nChannelId: {name}")
 
 webbrowser.open("https://www.youtube.com/results?search_query=" + name)
